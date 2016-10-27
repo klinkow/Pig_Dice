@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Pig Dice</title>
+  </head>
+
+  <body>
+    <div class = "container">
+      <h2>Pig Dice!</h2>
+      <img id = "pig1" src = "img/piggy.gif">
+      <img id = "pig2" src = "img/piggy.gif">
+      <br><br><br><br><br><br><br><br><br><br><br>
+      <form id = "dice-rolling">
+        <div class = "form-group">
+          <p>In Pig Mania the goal of the game is to be the first player to get over 100 points. One player begins the game by rolling the pig dice. The pig dice will end up in one of the following positions:
+          <ul>
+            <li><strong>Pig Out:</strong> Both pigs are on opposite sides (one pig on their left side the other pig on their right side). The player scores 0 points and play passes to the next player.</li>
+            <li><strong>Siders: </strong>Both pigs are on the same side (both pigs on either the right or left side). The player scores 1 point and rolls again.
+</li>
+            <li><strong>Hoofer: </strong>One pig is standing on all four legs and the other is lying down. The player scores 5 points and rolls again.
+</li>
+            <li><strong> Double Hoofer: </strong>Both pigs are standing on all four feet. The player scores 20 points and rolls again.</li>
+            <li><strong>Razorback: </strong>One pig is lying on its’ back while the other is lying on its’ side. The player scores 5 points and rolls again.</li>
+            <li><strong>Double Razorback: </strong>Both pigs are lying on their back. The player scores 20 points and rolls again.</li>
+            <li><strong>Snouter: </strong>One pig is standing up on its’ snout while the other pig is lying on its’ side. The player scores 10 points and rolls again.
+</li>
+            <li><strong>Double Snouter: </strong>Both pigs are standing up on their snouts. The player scores 40 points and rolls again.</li>
+            <li><strong>Leaning Jowler: </strong>One pig is standing on its’ snout, one of it’s ears, and one of its’ feet. The other pig is lying on its’ side. The player scores 15 points and rolls again.</li>
+            <li><strong>Double Leaning Jowler: </strong>Both pigs are standing on their snout, one of their ears, and one of their feet. The player scores 60 points and rolls again.
+</li>
+            <li><strong>Mixed Combo: </strong>If both pigs are in a position other than lying on their side and don’t match any of the above situations, you add up the individual points for both pigs, and roll again.</li>
+            <li><strong>Piggyback: </strong>If one pig ends up on the other pig’s back, the player forfeits the game. This situation appears to be near impossible.</li>
+          </ul>
+          <br><br><br>
+            <div class ="row">
+              <div class = "col-sm-4">
+                <table class = "table">
+                  <tr>
+                    <th>Players:</th>
+                    <th>Total Score:</th>
+                    <th>Turn Score:</th>
+                  </tr>
+                  <tr>
+                    <td>Player One</td>
+                    <td id="player1-totalscore"></td>
+                    <td id="player1-turnscore"></td>
+                  </tr>
+                  <tr>
+                    <td>Player Two</td>
+                    <td id="player2-totalscore"></td>
+                    <td id="player2-turnscore"></td>
+                  </tr>
+                </table>
+              </div>
+
+
+              <div class="col-sm-4">
+                <button id = "roll-dice" type = "submit" class = "btn btn-info btn-lg btn-block">Roll the dice!</button>
+                <button id = "end-turn" type = "submit" class = "btn btn-danger btn-lg btn-block">End turn</button>
+              </div>
+
+              <div class="col-sm-4">
+                <p><span id="latestRoll"></span></p>
+              </div>
+            </div>
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
